@@ -1,0 +1,99 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Page =================================================== */
+
+// 1. ROOT 					==============================
+
+@-webkit-viewport { 
+width : device-width; }
+
+@-moz-viewport { 
+width : device-width; }
+
+@-ms-viewport { 
+width : device-width; }
+
+@-o-viewport { 
+width : device-width; }
+
+@viewport { 
+width : device-width; }
+
+html {
+background : $bodycolor;
+font-size : 62.5%;
+-webkit-overflow-scrolling : touch;
+-webkit-tap-highlight-color : lighten($basecolor, 75%);
+-webkit-text-size-adjust : 100%;
+-ms-text-size-adjust : 100%; }
+
+body {
+margin : 0;
+padding : 0;
+width : 100%;
+background-color : transparent;
+font-family : $basefont;
+@include font-size();
+line-height : $baselineheight;
+color : $textcolor; }
+
+// 2. TYPOGRAPHY 			==============================
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+// NAVIGATION
+.navbar {
+  background: #1b1b1b;
+  overflow: hidden;
+  max-height: 44px;
+  @include transition(max-height .5s);
+  &.open{
+    max-height: 220px;
+  }
+  .navbar-inner {
+    .logo{
+      display: block;
+      padding: 9px 15px;
+      font-weight: bold;
+      color: #999999;
+      margin-bottom: 4px;
+    }
+    .nav {
+      a {
+        @extend .logo;
+      }
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  text-shadow: -1px 1px 0px #E0B78A;
+  @include horizontal(#feb900, #cb790f);
+  h1 {
+    margin: 10px 0;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 18px;
+    margin: 0 0 30px 0;
+    font-weight: 200;
+    line-height: 1.25;
+  }
+  .btn {
+    text-shadow: 1px 1px 0px #000000
+  }
+}
+// 6. LAYOUT 				==============================
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================
